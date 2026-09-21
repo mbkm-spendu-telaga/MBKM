@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MBKM SPENDU TELAGA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">
+        MBKM <span>SMPN 2 TELAGA</span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#anggota">Anggota</a>
+        <a href="#proker">Program Kerja</a>
+        <a href="#galeri">Galeri</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="label">
+            MBKM BATCH 10 • 2026
+        </p>
+
+        <h1>
+            Bersama<br>
+            <span>Mengajar & Mengabdi.</span>
+        </h1>
+
+        <p class="hero-description">
+            Selamat datang di website kelompok MBKM kami.
+            Kenali anggota, program kerja, dan perjalanan
+            kami selama mengajar dan mengabdi di sekolah dan masyarakat.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#anggota" class="btn primary">
+                Kenalan dengan Kami
+            </a>
+
+            <a href="#tentang" class="btn secondary">
+                Tentang Kami
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TENTANG -->
+<section class="section" id="tentang">
+
+    <div class="section-title">
+        <p>ABOUT US</p>
+
+        <h2>
+            Satu kelompok.<br>
+            Banyak cerita.
+        </h2>
+    </div>
+
+
+    <div class="about">
+
+        <div class="about-image">
+
+            <img
+                src="images/kelompok.jpg"
+                alt="Foto Kelompok KKN"
+            >
+
+        </div>
+
+
+        <div class="about-content">
+
+            <h3>
+                MBKM SPENDU TELAGA
+            </h3>
+
+            <p>
+                Kami adalah mahasiswa yang mengikuti program
+                Merdeka Belajar Kampus Merdeka dengan tujuan untuk belajar,
+                berbagi ilmu, dan memberikan kontribusi kepada
+                masyarakat.
+            </p>
+
+            <p>
+                Melalui berbagai kegiatan dan program kerja,
+                kami berharap dapat memberikan pengalaman
+                yang bermanfaat bagi sekolah dan masyarakat maupun bagi
+                kami sendiri.
+            </p>
+
+
+            <div class="info-grid">
+
+                <div>
+                    <strong>14</strong>
+                    <span>Anggota</span>
+                </div>
+
+                <div>
+                    <strong>4</strong>
+                    <span>Bulan</span>
+                </div>
+
+                <div>
+                    <strong>8</strong>
+                    <span>Program Kerja</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ANGGOTA -->
+<section class="section members-section" id="anggota">
+
+    <div class="section-title center">
+
+        <p>OUR TEAM</p>
+
+        <h2>
+            Kenalan dengan<br>
+            anggota kami.
+        </h2>
+
+        <span>
+            Klik foto untuk melihat profil.
+        </span>
+
+    </div>
+
+
+    <div class="member-container" id="memberContainer">
+
+        <!-- DATA ANGGOTA AKAN DIBUAT OLEH JAVASCRIPT -->
+
+    </div>
+
+</section>
+
+
+<!-- PROGRAM KERJA -->
+<section class="section" id="proker">
+
+    <div class="section-title">
+
+        <p>OUR PROGRAM</p>
+
+        <h2>
+            Program kerja
+            kami.
+        </h2>
+
+    </div>
+
+
+  <section id="program" class="program-section">
+
+    <div class="program-grid">
+
+        <!-- 1 -->
+        <div class="program-card" onclick="openProgram(
+            '📚 PROKER PRODI PPKn',
+            'Membantu Proses Pelaksanaan Pemilihan OSIS Di SMP N 2 TELAGA'
+        )">
+            <h3>📚 PROKER PRODI PPKn</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="program-card" onclick="openProgram(
+            '⚽ PROKER PENDIDIKAN KEPELATIHAN OLAHRAGA',
+            'Melaksanakan Turnamen Mini Soocer Antar Kelas Dan Melaksanakan Sosialisasi Olahraga Petanque.'
+            
+          
+        )">
+            <h3>⚽ PROKER PRODI PENDIDIKAN KEPELATIHAN OLAHRAGA</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="program-card" onclick="openProgram(
+            '🍀 PROKER PRODI IPA',
+            ' Pendidkan STIM Merancang Dan Mengembangkan Projek Pembelajaran Berbasis STIM Serta, Merancang Dan Melaksanakan Program Peningkatan SAINS Peserta Didik Melalui Kegiatan Pembelajaran Pendampingan Atau Pengembangan Bahan Literasi IPA.'
+        )">
+            <h3>🍀 PROKER PRODI IPA</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
+
+        <div class="program-card" onclick="openProgram(
+            '📖 PROKER PRODI BAHASA DAN SASTRA INDONESIA',
+            'Membuat Kotak Rahasia Dan Papan Mading Karya Siswa.'
+        )">
+            <h3>📖PROKER PRODI BAHASA DAN SASTRA INDONESIA</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="program-card" onclick="openProgram(
+            '🤝 PROKER BERSAMA',
+            'Membantu Kegiatan Kokurikuler Di Sekolah Dengan Tema Lingkungan Bersih Dan Bumi Sehat.'
+        )">
+            <h3>🤝 PROKER BERSAMA</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
+
+        <!-- 7 -->
+        <div class="program-card" onclick="openProgram(
+            '🧹 BAKTI SOSIAL',
+            'Melaksanakan Bakti Sosial Ke Masjid Terdekat.'
+        )">
+            <h3>🧹 BAKTI SOSIAL</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
+
+      
+
+    </div>
+
+  </section>
+
+
+
+        
+      
+    </div>
+
+</section>
+
+
+
+<!-- GALERI -->
+<section class="section" id="galeri">
+
+    <div class="section-title center">
+
+        <p>OUR MEMORIES</p>
+
+        <h2>
+            Cerita dalam<br>
+            bingkai.
+        </h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <img src="images/foto1.jpg" alt="Dokumentasi Proker">
+
+        <img src="images/foto2.jpg" alt="Dokumentasi proker">
+
+        <img src="images/foto3.jpg" alt="Dokumentasi Proker">
+
+        <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+
+        <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>
+        MBKM SMPN 2 TELAGA
+    </h2>
+
+    <p>
+        Bersama belajar, berbagi, dan mengabdi.
+    </p>
+
+    <div class="social">
+
+        <a href="https://www.instagram.com/mbkm_spendutalaga?stkn=MWF0ZjVzMjV0ZnR2Zg==" target="_blank">
+            Instagram
+        </a>
+
+        <a href="https://www.tiktok.com/@ungmengajar_spendutalaga?_r=1&_t=ZS-99uWRgaiBAF==" target="_blank">
+            Tiktok
+        </a>
+
+    </div>
+
+    <small>
+        © 2026 Kelompok MBKM SPENDU TELAGA
+    </small>
+
+</footer>
+
+
+<!-- MODAL PROFIL -->
+<div class="modal" id="profileModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeProfile()">
+            ×
+        </button>
+
+        <img id="modalPhoto" src="" alt="Foto">
+
+        <div class="modal-info">
+
+            <p id="modalRole"></p>
+
+            <h2 id="modalName"></h2>
+
+            <span id="modalStudy"></span>
+
+            <hr>
+
+            <p id="modalBio"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<audio id="bgMusic" loop>
+    <source src="music/kkn.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" onclick="toggleMusic()">
+    🎵
+</button>
+
+<script src="script.js"></script>
+
+  <div id="programModal" class="program-modal">
+
+    <div class="program-modal-box">
+
+        <button class="program-close" onclick="closeProgram()">
+            &times;
+        </button>
+
+        <div class="program-icon">
+            📋
+        </div>
+
+        <h2 id="programTitle">Judul Program</h2>
+
+        <p id="programDescription">
+            Deskripsi program kerja.
+        </p>
+
+    </div>
+
+  </div>
+  
+</body>
+</html>
