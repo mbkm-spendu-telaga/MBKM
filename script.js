@@ -1,468 +1,610 @@
-/* =========================================
-   DATA ANGGOTA KKN
-========================================= */
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-const anggota = [
-    {
-        nama: "Moh. Hafidz Arizki",
-        jabatan: "Koordinator Sekolah",
-        jurusan: "Pendidikan Kepelatihan Olahraga",
-        foto: "images/anggota1.jpg",
-        bio: "Bertanggung jawab dalam Mengkordinasi kelompok MBKM."
-    },
+    <title>MBKM SPENDU TELAGA</title>
 
-    {
-        nama: "Moh. Arzikim D. Kase",
-        jabatan: "Wakil Korsek",
-        jurusan: "PPKn",
-        foto: "images/anggota2.jpg",
-        bio: "Bertanggung jawab membantu mengoordinasikan seluruh anggota dan kegiatan kelompok MBKM."
-    },
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    {
-        nama: "Olivia Bantuha",
-        jabatan: "Sekretaris",
-        jurusan: "PPKn",
-        foto: "images/anggota3.jpg",
-        bio: "Mengelola administrasi, surat-menyurat, dan berbagai kebutuhan administrasi kelompok."
-    },
+<body>
 
-    {
-        nama: "Fania Aulya Midu",
-        jabatan: "Bendahara",
-        jurusan: "Bahasa Dan Sastra Indonesia",
-        foto: "images/anggota4.jpg",
-        bio: "Mengatur keuangan dan kebutuhan dana selama kegiatan KKN berlangsung."
-    },
+<!-- NAVBAR -->
+<header class="navbar">
 
-    {
-        nama: "Wajriyanto J pakaya",
-        jabatan: "Koor Perlengkapan",
-        jurusan: "Pendidikan Kepelatihan Olahraga",
-        foto: "images/anggota5.jpg",
-        bio: "Mengkoordinir Anggota."
-    },
+    <div class="logo">
+        MBKM <span>SMPN 2 TELAGA</span>
+    </div>
 
-    {
-        nama: "Jusriawan j Lakuntu",
-        jabatan: "Perlengkapan",
-        jurusan: "Pendidikan Kepelatihan Olahraga",
-        foto: "images/anggota6.jpg",
-        bio: "Kalau butuh apa apa hubungi kami aja."
-    },
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
 
-    {
-        nama: "Sitti Fatimah Tuzzahra",
-        jabatan: "Perlengkapan",
-        jurusan: "Bahasa Dan Sastra Indonesia",
-        foto: "images/anggota7.jpg",
-        bio: "Aktif membantu pelaksanaan kegiatan pendidikan dan pemberdayaan masyarakat."
-    },
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#anggota">Anggota</a>
+        <a href="#proker">Program Kerja</a>
+        <a href="#galeri">Galeri</a>
+    </nav>
 
-    
-  {
-        nama: "Anisa Rumpabulu",
-        jabatan: "Perlengkapan",
-        jurusan: "Bahasa Dan Sastra Indonesia",
-        foto: "images/anggota8.jpg",
-        bio: "Kalau Butuh apa apa hubungi kami aja"
-  },
-  
-  {
-        nama: "Rindi Husain",
-        jabatan: "Perlengkapan",
-        jurusan: "PPKn",
-        foto: "images/anggota9.jpg",
-        bio: "Berperan dalam kegiatan sosial, lingkungan, dan program kerja kelompok."
-},
-  
-  
-  {
-        nama: "Tegar Wicaksana Sutisna",
-        jabatan: "Koor PDD",
-        jurusan: "Pendidikan Kepatihan Olahraga",
-        foto: "images/anggota10.jpg",
-        bio: " Mengkoordinasikan seluruh bidang PDD, memastikan konsep, publikasi, dekorasi, dan dokumentasi berjalan terarah serta sesuai dengan kebutuhan setiap kegiatan."
-  },
-  
-  
-  {
-        nama: "Sutrin R. moha",
-        jabatan: "PDD",
-        jurusan: "Bahasa Dan Sastra Indonesia",
-        foto: "images/anggota11.jpg",
-        bio: "Di balik setiap kegiatan yang terlihat, ada kami yang bekerja di balik layar."
-  },
-
-  
-  {
-        nama: "Firanti R. Unusa",
-        jabatan: "PDD",
-        jurusan: "Bahasa Dan Sastra Indonesia",
-        foto: "images/anggota12.jpg",
-        bio: "Di balik setiap kegiatan yang terlihat, ada kami yang bekerja di balik layar."
-  },
-  
-  {
-        nama: "Egi Yunus",
-        jabatan: "Humas",
-        jurusan: "Pendidikan IPA",
-        foto: "images/anggota13.jpg",
-        bio: "Humas Humas Humas."
-  },
-  
-  {
-        nama: "Brilian Aditya",
-        jabatan: "Humas",
-        jurusan: "Pendidikan IPA",
-        foto: "images/anggota14.jpg",
-        bio: "Pokoknya Humas."
-  }
-];
+</header>
 
 
+<!-- HERO -->
+<section class="hero" id="home">
 
-/* =========================================
-   ELEMENT HTML
-========================================= */
+    <div class="hero-content">
 
-const container = document.getElementById("memberContainer");
-const modal = document.getElementById("profileModal");
-const modalPhoto = document.getElementById("modalPhoto");
-const modalRole = document.getElementById("modalRole");
-const modalName = document.getElementById("modalName");
-const modalStudy = document.getElementById("modalStudy");
-const modalBio = document.getElementById("modalBio");
-const navMenu = document.getElementById("navMenu");
+        <p class="label">
+            MBKM BATCH 10 • 2026
+        </p>
+
+        <h1>
+            Bersama<br>
+            <span>Mengajar & Mengabdi.</span>
+        </h1>
+
+        <p class="hero-description">
+            Selamat datang di website kelompok MBKM kami.
+            Kenali anggota, program kerja, dan perjalanan
+            kami selama mengajar dan mengabdi di sekolah dan masyarakat.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#anggota" class="btn primary">
+                Kenalan dengan Kami
+            </a>
+
+            <a href="#tentang" class="btn secondary">
+                Tentang Kami
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-/* =========================================
-   MEMBUAT KARTU ANGGOTA
-========================================= */
+<!-- TENTANG -->
+<section class="section" id="tentang">
 
-anggota.forEach(function (orang) {
+    <div class="section-title">
+        <p>ABOUT US</p>
 
-    const card = document.createElement("div");
+        <h2>
+            Satu kelompok.<br>
+            Banyak cerita.
+        </h2>
+    </div>
 
-    card.className = "member-card";
 
-    card.innerHTML = `
-        <img
-            src="${orang.foto}"
-            alt="${orang.nama}"
-        >
+    <div class="about">
 
-        <div class="member-info">
+        <div class="about-image">
 
-            <div class="member-role">
-                ${orang.jabatan}
-            </div>
+            <img
+                src="images/kelompok.jpg"
+                alt="Foto Kelompok KKN"
+            >
+
+        </div>
+
+
+        <div class="about-content">
 
             <h3>
-                ${orang.nama}
+                MBKM SPENDU TELAGA
             </h3>
 
             <p>
-                ${orang.jurusan}
+                Kami adalah mahasiswa yang mengikuti program
+                Merdeka Belajar Kampus Merdeka dengan tujuan untuk belajar,
+                berbagi ilmu, dan memberikan kontribusi kepada
+                masyarakat.
             </p>
 
+            <p>
+                Melalui berbagai kegiatan dan program kerja,
+                kami berharap dapat memberikan pengalaman
+                yang bermanfaat bagi sekolah dan masyarakat maupun bagi
+                kami sendiri.
+            </p>
+
+
+            <div class="info-grid">
+
+                <div>
+                    <strong>14</strong>
+                    <span>Anggota</span>
+                </div>
+
+                <div>
+                    <strong>4</strong>
+                    <span>Bulan</span>
+                </div>
+
+                <div>
+                    <strong>8</strong>
+                    <span>Program Kerja</span>
+                </div>
+
+            </div>
+
         </div>
-    `;
 
-    card.addEventListener("click", function () {
-        openProfile(orang);
-    });
+    </div>
 
-    container.appendChild(card);
-});
+</section>
 
 
-/* =========================================
-   BUKA PROFIL
-========================================= */
+<!-- ANGGOTA -->
+<section class="section members-section" id="anggota">
 
-function openProfile(orang) {
+    <div class="section-title center">
 
-    modalPhoto.src = orang.foto;
+        <p>OUR TEAM</p>
 
-    modalPhoto.alt = orang.nama;
+        <h2>
+            Kenalan dengan<br>
+            anggota kami.
+        </h2>
 
-    modalRole.textContent = orang.jabatan;
+        <span>
+            Klik foto untuk melihat profil.
+        </span>
 
-    modalName.textContent = orang.nama;
+    </div>
 
-    modalStudy.textContent = orang.jurusan;
 
-    modalBio.textContent = orang.bio;
+    <div class="member-container" id="memberContainer">
 
-    modal.classList.add("active");
-}
+        <!-- DATA ANGGOTA AKAN DIBUAT OLEH JAVASCRIPT -->
 
+    </div>
 
-/* =========================================
-   TUTUP PROFIL
-========================================= */
+</section>
 
-function closeProfile() {
 
-    modal.classList.remove("active");
-}
+<!-- PROGRAM KERJA -->
+<section class="section" id="proker">
 
+    <div class="section-title">
 
-/* =========================================
-   MENU MOBILE
-========================================= */
+        <p>OUR PROGRAM</p>
 
-function toggleMenu() {
+        <h2>
+            Program kerja
+            kami.
+        </h2>
 
-    navMenu.classList.toggle("active");
-}
+    </div>
 
 
-/*
-   Beri tahu browser bahwa fungsi
-   toggleMenu tersedia untuk HTML.
-*/
+  <section id="program" class="program-section">
 
-window.toggleMenu = toggleMenu;
+    <div class="program-grid">
 
-window.closeProfile = closeProfile;
+        <!-- 1 -->
+        <div class="program-card" onclick="openProgram(
+            '📚 PROKER PRODI PPKn',
+            'Membantu Proses Pelaksanaan Pemilihan OSIS Di SMP N 2 TELAGA'
+        )">
+            <h3>📚 PROKER PRODI PPKn</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
 
+        <!-- 2 -->
+        <div class="program-card" onclick="openProgram(
+            '⚽ PROKER PENDIDIKAN KEPELATIHAN OLAHRAGA',
+            'Melaksanakan Turnamen Mini Soocer Antar Kelas Dan Melaksanakan Sosialisasi Olahraga Petanque.'
+            
+          
+        )">
+            <h3>⚽ PROKER PRODI PENDIDIKAN KEPELATIHAN OLAHRAGA</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
 
-/* =========================================
-   TUTUP MENU SETELAH KLIK LINK
-========================================= */
+        <!-- 3 -->
+        <div class="program-card" onclick="openProgram(
+            '🍀 PROKER PRODI IPA',
+            ' Pendidkan STIM Merancang Dan Mengembangkan Projek Pembelajaran Berbasis STIM Serta, Merancang Dan Melaksanakan Program Peningkatan SAINS Peserta Didik Melalui Kegiatan Pembelajaran Pendampingan Atau Pengembangan Bahan Literasi IPA.'
+        )">
+            <h3>🍀 PROKER PRODI IPA</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
 
-const navLinks = document.querySelectorAll("#navMenu a");
+        <div class="program-card" onclick="openProgram(
+            '📖 PROKER PRODI BAHASA DAN SASTRA INDONESIA',
+            'Membuat Kotak Rahasia Dan Papan Mading Karya Siswa.'
+        )">
+            <h3>📖PROKER PRODI BAHASA DAN SASTRA INDONESIA</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
 
-navLinks.forEach(function (link) {
+        <!-- 6 -->
+        <div class="program-card" onclick="openProgram(
+            '🤝 PROKER BERSAMA',
+            'Membantu Kegiatan Kokurikuler Di Sekolah Dengan Tema Lingkungan Bersih Dan Bumi Sehat.'
+        )">
+            <h3>🤝 PROKER BERSAMA</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
 
-    link.addEventListener("click", function () {
+        <!-- 7 -->
+        <div class="program-card" onclick="openProgram(
+            '🧹 BAKTI SOSIAL',
+            'Melaksanakan Bakti Sosial Ke Masjid Terdekat.'
+        )">
+            <h3>🧹 BAKTI SOSIAL</h3>
+            <p>Klik untuk melihat selengkapnya</p>
+        </div>
 
-        navMenu.classList.remove("active");
+      
 
-    });
+    </div>
 
-});
+  </section>
 
 
-/* =========================================
-   TUTUP MODAL KETIKA KLIK DI LUAR
-========================================= */
 
-modal.addEventListener("click", function (event) {
+        
+      
+    </div>
 
-    if (event.target === modal) {
+</section>
 
-        closeProfile();
 
-    }
 
-});
+<!-- GALERI -->
+<section class="section" id="galeri">
 
+    <div class="section-title center">
 
+        <p>OUR MEMORIES</p>
 
-/* =========================================
-   TUTUP MODAL DENGAN TOMBOL ESC
-========================================= */
+        <h2>
+            Cerita dalam<br>
+            bingkai.
+        </h2>
 
-document.addEventListener("keydown", function (event) {
+    </div>
 
-    if (event.key === "Escape") {
 
-        closeProfile();
+    <div class="gallery">
 
-    }
+        <img src="images/foto1.jpg" alt="Dokumentasi Proker">
 
-});
+        <img src="images/foto2.jpg" alt="Dokumentasi proker">
 
-/* =========================================
-   MUSIK BACKGROUND
-========================================= */
+        <img src="images/foto3.jpg" alt="Dokumentasi Proker">
 
-const bgMusic =
-    document.getElementById("bgMusic");
+        <img src="images/foto4.jpg" alt="Dokumentasi Proker">
 
-const musicButton =
-    document.getElementById("musicButton");
+        <img src="images/foto4.jpg" alt="Dokumentasi Proker">
 
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
+      <img src="images/foto4.jpg" alt="Dokumentasi Proker">
 
-function toggleMusic() {
+    </div>
 
-    if (!bgMusic || !musicButton) {
-        return;
-    }
+</section>
 
+<!-- BUKU TAMU -->
+<section class="guestbook-section" id="guestbook">
 
-    if (bgMusic.paused) {
+    <div class="section-title">
+        <span>💌</span>
+        <h2>Buku Tamu</h2>
+        <p>Tinggalkan pesan dan cerita untuk kelompok kami.</p>
+    </div>
 
-        bgMusic.play()
-            .then(function() {
+  <div class="admin-login-box">
+    <button id="adminLoginButton" type="button" onclick="openAdminLogin()">
+    🔐 Login Admin
+    </button>
 
-                musicButton.textContent = "🔊";
+    <button id="adminLogoutButton" onclick="adminLogout()" style="display:none;">
+        🚪 Logout Admin
+    </button>
+  </div>
 
-                musicButton.classList.add("playing");
+  <div id="adminLoginModal" class="admin-login-modal">
 
-            })
-            .catch(function(error) {
+    <div class="admin-login-card">
 
-                console.log(
-                    "Musik belum dapat dimainkan:",
-                    error
-                );
+        <button
+            class="admin-login-close"
+            onclick="closeAdminLogin()"
+            type="button"
+        >
+            ×
+        </button>
 
-            });
+        <div class="admin-login-icon">🔐</div>
 
-    } else {
+        <h3>Login Admin</h3>
 
-        bgMusic.pause();
+        <p>Masuk untuk mengelola Buku Tamu.</p>
 
-        musicButton.textContent = "🎵";
+        <input
+            type="email"
+            id="adminEmail"
+            placeholder="Email admin"
+            autocomplete="username"
+        >
 
-        musicButton.classList.remove("playing");
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password admin"
+            autocomplete="current-password"
+        >
 
-    }
+        <button
+            class="admin-login-submit"
+            type="button"
+            onclick="adminLogin()"
+        >
+            🔐 Masuk
+        </button>
 
-}
+    </div>
 
+  </div>
+  
+  <div class="guestbook-container">
 
-/* Agar onclick di HTML dapat memanggilnya */
-window.toggleMusic = toggleMusic;
+        <div class="guestbook-form">
 
-/* =========================
-   ANIMASI SAAT SCROLL
-========================= */
+            <div class="guestbook-icon">
+                💌
+            </div>
 
-const revealElements = document.querySelectorAll(
-    "section, .card, .member-card, .program-card, .gallery-item"
-);
+            <h3>Tulis Pesan</h3>
 
-const revealObserver = new IntersectionObserver(
-    function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-            }
-        });
-    },
-    {
-        threshold: 0.15
-    }
-);
+            <p>
+                Sampaikan kesan, pesan, atau dukunganmu
+                untuk perjalanan MBKM kami.
+            </p>
 
-revealElements.forEach(function(element) {
-    element.classList.add("reveal");
-    revealObserver.observe(element);
-});
+            <input
+                type="text"
+                id="guestName"
+                placeholder="Nama kamu"
+                maxlength="40"
+            >
 
+            <textarea
+                id="guestMessage"
+                placeholder="Tulis pesan kamu..."
+                maxlength="250"
+            ></textarea>
 
-/* =========================
-   FOTO KLIK → ZOOM
-========================= */
+            <button
+                type="button"
+                onclick="addGuestMessage()"
+                class="guestbook-submit"
+            >
+                Kirim Pesan ✨
+            </button>
 
-const photoViewer = document.createElement("div");
+        </div>
 
-photoViewer.className = "photo-viewer";
 
-photoViewer.innerHTML = `
-    <span class="close-photo">&times;</span>
-    <img src="" alt="Foto">
-`;
+        <div class="guestbook-messages">
 
-document.body.appendChild(photoViewer);
+            <div class="guestbook-heading">
+                <span>💬</span>
+                <h3>Pesan Pengunjung</h3>
+            </div>
 
-const viewerImage = photoViewer.querySelector("img");
-const closePhoto = photoViewer.querySelector(".close-photo");
+            <div id="guestMessages">
+                <!-- Pesan muncul di sini -->
+            </div>
 
-document.querySelectorAll("img").forEach(function(img) {
+        </div>
 
-    img.classList.add("photo-zoom");
+    </div>
 
-    img.addEventListener("click", function() {
+</section>
+  
+<!-- FOOTER -->
+<footer>
 
-        viewerImage.src = img.src;
+    <h2>
+        MBKM SMPN 2 TELAGA
+    </h2>
 
-        photoViewer.classList.add("show");
+    <p>
+        Bersama belajar, berbagi, dan mengabdi.
+    </p>
 
-    });
+    <div class="social">
 
-});
+        <a href="https://www.instagram.com/mbkm_spendutalaga?stkn=MWF0ZjVzMjV0ZnR2Zg==" target="_blank">
+            Instagram
+        </a>
 
+        <a href="https://www.tiktok.com/@ungmengajar_spendutalaga?_r=1&_t=ZS-99uWRgaiBAF==" target="_blank">
+            Tiktok
+        </a>
 
-closePhoto.addEventListener("click", function() {
-    photoViewer.classList.remove("show");
-});
+    </div>
 
+    <small>
+        © 2026 Kelompok MBKM SPENDU TELAGA
+    </small>
 
-photoViewer.addEventListener("click", function(e) {
+</footer>
 
-    if (e.target === photoViewer) {
-        photoViewer.classList.remove("show");
-    }
 
-});
+<!-- MODAL PROFIL -->
+<div class="modal" id="profileModal">
 
+    <div class="modal-box">
 
-document.addEventListener("keydown", function(e) {
+        <button
+            class="close"
+            onclick="closeProfile()">
+            ×
+        </button>
 
-    if (e.key === "Escape") {
-        photoViewer.classList.remove("show");
-    }
+        <img id="modalPhoto" src="" alt="Foto">
 
-});
+        <div class="modal-info">
 
-/* =========================
-   PROGRAM KERJA POPUP
-========================= */
+            <p id="modalRole"></p>
 
-function openProgram(title, description) {
+            <h2 id="modalName"></h2>
 
-    const modal = document.getElementById("programModal");
-    const titleElement = document.getElementById("programTitle");
-    const descriptionElement = document.getElementById("programDescription");
+            <span id="modalStudy"></span>
 
-    if (!modal) return;
+            <hr>
 
-    titleElement.textContent = title;
-    descriptionElement.textContent = description;
+            <p id="modalBio"></p>
 
-    modal.classList.add("show");
-}
+        </div>
 
+    </div>
 
-function closeProgram() {
+</div>
 
-    const modal = document.getElementById("programModal");
 
-    if (!modal) return;
+<audio id="bgMusic" preload="auto" loop>
+    <source src="./music/kkn.mp3" type="audio/mpeg">
+</audio>
 
-    modal.classList.remove("show");
-}
+<button id="musicButton" type="button" onclick="toggleMusic()">
+    🎵
+</button>
 
 
-/* Tutup ketika klik area luar popup */
+<script type="module" src="script.js"></script>
 
-const programModal = document.getElementById("programModal");
+  <div id="programModal" class="program-modal">
 
-if (programModal) {
+    <div class="program-modal-box">
 
-    programModal.addEventListener("click", function(e) {
+        <button class="program-close" onclick="closeProgram()">
+            &times;
+        </button>
 
-        if (e.target === programModal) {
-            closeProgram();
-        }
+        <div class="program-icon">
+            📋
+        </div>
 
-    });
+        <h2 id="programTitle">Judul Program</h2>
 
-}
+        <p id="programDescription">
+            Deskripsi program kerja.
+        </p>
 
+    </div>
 
-/* Tutup dengan tombol ESC */
+  </div>
+  
+  <!-- SHARE BUTTON -->
 
-document.addEventListener("keydown", function(e) {
+<a
+    id="shareWhatsApp"
+    href="#"
+    target="_blank"
+    class="share-whatsapp"
+>
+    <span>💚</span>
+    <span>Bagikan Website</span>
+</a>
 
-    if (e.key === "Escape") {
-        closeProgram();
-    }
+  <!-- BACK TO TOP -->
+<button id="backToTop" aria-label="Kembali ke atas">
+    ↑
+</button>
 
-});
+  <!-- KONFIRMASI HAPUS PESAN -->
+
+<div id="deleteConfirmModal" class="delete-confirm-modal">
+
+    <div class="delete-confirm-card">
+
+        <div class="delete-confirm-icon">
+            🗑️
+        </div>
+
+        <h3>Hapus Pesan?</h3>
+
+        <p>
+            Pesan ini akan dihapus secara permanen
+            dari Buku Tamu.
+        </p>
+
+        <div class="delete-confirm-actions">
+
+            <button
+                type="button"
+                class="delete-cancel-btn"
+                onclick="closeDeleteConfirm()"
+            >
+                Batal
+            </button>
+
+            <button
+                type="button"
+                class="delete-confirm-btn"
+                onclick="confirmDeleteGuestMessage()"
+            >
+                🗑️ Hapus
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+  
+</body>
+  <!-- LOADING SCREEN -->
+<div id="loadingScreen">
+    <div class="loading-content">
+
+        <div id="loadingIcon" class="loading-logo">🌱</div>
+
+        <h2>MBKM</h2>
+
+        <p id="loadingText">
+            Menyiapkan perjalanan kami...
+        </p>
+
+        <div class="loading-bar">
+            <span></span>
+        </div>
+
+        <div class="loading-percent">
+            <span id="loadingPercent">0</span>%
+        </div>
+
+    </div>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+               
