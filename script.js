@@ -455,62 +455,6 @@ document.addEventListener("keydown", function(e) {
     }
 
 });
-
-/* =========================
-   PROGRAM KERJA POPUP
-========================= */
-
-function openProgram(title, description) {
-
-    const modal = document.getElementById("programModal");
-    const titleElement = document.getElementById("programTitle");
-    const descriptionElement = document.getElementById("programDescription");
-
-    if (!modal) return;
-
-    titleElement.textContent = title;
-    descriptionElement.textContent = description;
-
-    modal.classList.add("show");
-}
-
-
-function closeProgram() {
-
-    const modal = document.getElementById("programModal");
-
-    if (!modal) return;
-
-    modal.classList.remove("show");
-}
-
-
-/* Tutup ketika klik area luar popup */
-
-const programModal = document.getElementById("programModal");
-
-if (programModal) {
-
-    programModal.addEventListener("click", function(e) {
-
-        if (e.target === programModal) {
-            closeProgram();
-        }
-
-    });
-
-}
-
-
-/* Tutup dengan tombol ESC */
-
-document.addEventListener("keydown", function(e) {
-
-    if (e.key === "Escape") {
-        closeProgram();
-    }
-
-});
 /* =================================
    LOADING SCREEN 5 DETIK
 ================================= */
@@ -1062,3 +1006,19 @@ function closeAdminLogin() {
 
 window.openAdminLogin = openAdminLogin;
 window.closeAdminLogin = closeAdminLogin;
+
+/* =========================
+   PROGRAM KERJA POPUP
+========================= */
+
+function openProgram(title, description) {
+
+    const modal = document.getElementById("programModal");
+    const titleElement = document.getElementById("programTitle");
+    const descriptionElement = document.getElementById("programDescription");
+
+    if (!modal) return;
+
+    titleElement.textContent = title;
+    descriptionElement.textContent = description;
+   
