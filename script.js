@@ -1026,4 +1026,36 @@ function openProgram(title, description) {
     descriptionElement.textContent = description;
 
    console.log("SCRIPT.JS BERHASIL DIJALANKAN DI GITHUB");
+
+   <script>
+(function () {
+    var percent = 0;
+    var loadingPercent = document.getElementById("loadingPercent");
+    var loadingScreen = document.getElementById("loadingScreen");
+
+    var timer = setInterval(function () {
+        percent += 2;
+
+        if (percent > 100) {
+            percent = 100;
+        }
+
+        if (loadingPercent) {
+            loadingPercent.textContent = percent;
+        }
+
+        if (percent >= 100) {
+            clearInterval(timer);
+
+            if (loadingScreen) {
+                loadingScreen.classList.add("hide");
+
+                setTimeout(function () {
+                    loadingScreen.style.display = "none";
+                }, 800);
+            }
+        }
+    }, 100);
+})();
+</script>
    
