@@ -1459,3 +1459,943 @@ footer small {
 .program-close:hover {
     color: #f5c542;
 }
+/* =================================
+   LOADING SCREEN
+================================= */
+
+#loadingScreen {
+    position: fixed;
+    inset: 0;
+    background: #07130d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+#loadingScreen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-logo {
+    font-size: 70px;
+
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    animation: iconChange .8s ease;
+}
+
+.loading-content h2 {
+    margin: 15px 0 5px;
+
+    color: #f5c542;
+
+    font-size: 30px;
+}
+
+.loading-content p {
+    color: #aaa;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+}
+
+.loading-bar {
+    width: 200px;
+    height: 5px;
+
+    background: rgba(255,255,255,.12);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin: auto;
+}
+
+.loading-bar span {
+    display: block;
+
+    height: 100%;
+    width: 0%;
+
+    background: #f5c542;
+
+    animation: loadingBar 5s linear forwards;
+}
+
+.loading-percent {
+    margin-top: 12px;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+@keyframes loadingBar {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes iconChange {
+
+    0% {
+        transform: scale(.6);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+/* =================================
+   WHATSAPP SHARE
+================================= */
+
+.share-whatsapp {
+    position: fixed;
+
+    bottom: 25px;
+    left: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    background: #25D366;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.3);
+
+    z-index: 999;
+
+    transition: .3s ease;
+}
+
+.share-whatsapp:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+@media(max-width:600px) {
+
+    .share-whatsapp {
+        left: 15px;
+        bottom: 18px;
+
+        padding: 11px 15px;
+
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================
+   PREMIUM BACK TO TOP
+========================================= */
+
+#backToTop {
+    position: fixed;
+    right: 22px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(245,197,66,.45);
+    border-radius: 50%;
+
+    background: rgba(7,19,13,.85);
+    color: #f5c542;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 9998;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.35),
+        0 0 20px rgba(245,197,66,.08);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px) scale(.8);
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease,
+        transform .35s ease,
+        background .3s ease;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0) scale(1);
+}
+
+#backToTop:hover {
+    background: #f5c542;
+    color: #07130d;
+
+    transform: translateY(-5px) scale(1.08);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.4),
+        0 0 25px rgba(245,197,66,.25);
+}
+
+#backToTop:active {
+    transform: scale(.9);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    #backToTop {
+        width: 44px;
+        height: 44px;
+
+        right: 16px;
+        bottom: 18px;
+
+        font-size: 21px;
+    }
+
+}
+
+/* =========================================
+   BUKU TAMU - DARK EMERALD PREMIUM
+========================================= */
+
+.guestbook-section {
+    padding: 80px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.guestbook-container {
+    max-width: 1000px;
+    margin: 35px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* CARD */
+
+.guestbook-form,
+.guestbook-messages {
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(13,45,31,.95),
+            rgba(6,25,17,.95)
+        );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.04);
+
+    transition: .4s ease;
+}
+
+.guestbook-form:hover,
+.guestbook-messages:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(245,197,66,.3);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45),
+        0 0 30px rgba(245,197,66,.05);
+}
+
+
+/* ICON */
+
+.guestbook-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: rgba(245,197,66,.08);
+
+    border: 1px solid rgba(245,197,66,.2);
+
+    font-size: 27px;
+
+    margin-bottom: 18px;
+}
+
+
+/* TITLE */
+
+.guestbook-form h3,
+.guestbook-messages h3 
+color: #f5f5f5;
+
+    margin: 0 0 8px;
+}
+
+.guestbook-form > p {
+    color: #8fa398;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 22px;
+}
+
+
+/* INPUT */
+
+.guestbook-form input,
+.guestbook-form textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-bottom: 13px;
+
+    padding: 14px 16px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    background: #091b12;
+
+    color: #f5f5f5;
+
+    font-family: inherit;
+
+    transition: .3s ease;
+}
+
+.guestbook-form input:focus,
+.guestbook-form textarea:focus {
+
+    border-color: #f5c542;
+
+    background: #0b2116;
+
+    box-shadow:
+        0 0 0 3px rgba(245,197,66,.07);
+}
+
+.guestbook-form input::placeholder,
+.guestbook-form textarea::placeholder {
+    color: #63776c;
+}
+
+.guestbook-form textarea {
+    height: 120px;
+
+    resize: vertical;
+}
+
+
+/* BUTTON */
+
+.guestbook-submit {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        #f5c542,
+        #dcae2e
+    );
+
+    color: #07130d;
+
+    font-weight: 800;
+   cursor: pointer;
+
+    transition: .3s ease;
+
+    box-shadow:
+        0 8px 20px rgba(245,197,66,.12);
+}
+
+.guestbook-submit:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(245,197,66,.25);
+}
+
+
+/* HEADING */
+
+.guestbook-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.guestbook-heading span {
+    font-size: 20px;
+}
+
+
+/* MESSAGE */
+
+.guest-message {
+
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,.035);
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    animation: guestMessageIn .5s ease;
+
+    transition: .3s ease;
+}
+
+.guest-message:hover {
+
+    background: rgba(245,197,66,.045);
+
+    border-color: rgba(245,197,66,.15);
+
+    transform: translateX(4px);
+}
+
+.guest-message-name {
+
+    color: #f5c542;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.guest-message-text {
+
+    color: #aab8b0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* EMPTY */
+
+.guest-empty {
+
+    color: #64766c;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    padding: 35px 10px;
+}
+
+
+/* ANIMATION */
+
+@keyframes guestMessageIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .guestbook-container {
+        grid-template-columns: 1fr;
+    }
+
+    .guestbook-form,
+    .guestbook-messages {
+        padding: 23px;
+    }
+
+}
+
+/* =========================================
+   SCROLL PESAN PENGUNJUNG
+========================================= */
+
+.guestbook-messages {
+    max-height: 500px;
+   overflow-y: auto;
+}
+
+/* Scrollbar */
+.guestbook-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.guestbook-messages::-webkit-scrollbar-track {
+    background: rgba(255,255,255,.03);
+    border-radius: 10px;
+}
+
+.guestbook-messages::-webkit-scrollbar-thumb {
+    background: rgba(245,197,66,.45);
+    border-radius: 10px;
+}
+
+.guestbook-messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(245,197,66,.7);
+}
+
+.guest-message-time {
+    margin-top: 9px;
+    color: #65776d;
+    font-size: 11px;
+    text-align: right;
+}
+
+.admin-login-box {
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.admin-login-box button {
+    padding: 10px 16px;
+    border: 1px solid rgba(245,197,66,.3);
+    border-radius: 12px;
+    background: #0d2d1f;
+    color: #f5c542;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.admin-login-box button:hover {
+    background: #123d29;
+    transform: translateY(-2px);
+}
+
+.delete-message-btn {
+    margin-top: 10px;
+    padding: 7px 11px;
+    border: 1px solid rgba(255,80,80,.2);
+    border-radius: 9px;
+    background: rgba(150,40,40,.15);
+    color: #ff8b8b;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.delete-message-btn:hover {
+    background: rgba(180,50,50,.3);
+    transform: translateY(-2px);
+}
+
+.admin-login-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,.75);
+    backdrop-filter: blur(10px);
+
+    opacity: 0;
+   visibility: hidden;
+
+    transition: .3s ease;
+}
+
+.admin-login-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.admin-login-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 380px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d2d1f,
+            #061a11
+        );
+
+    border: 1px solid rgba(245,197,66,.25);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.5);
+
+    text-align: center;
+}
+
+.admin-login-close {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    border: none;
+    background: none;
+
+    color: #aaa;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.admin-login-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.admin-login-card h3 {
+    margin: 0 0 7px;
+    color: white;
+    font-size: 24px;
+}
+
+.admin-login-card p {
+    color: #8fa398;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.admin-login-card input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: #091b12;
+
+    color: white;
+
+    outline: none;
+}
+
+.admin-login-card input:focus {
+    border-color: #f5c542;
+}
+
+.admin-login-submit {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #f5c542;
+    color: #07130d;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   POPUP KONFIRMASI HAPUS
+========================================= */
+
+.delete-confirm-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 100000;
+
+    display: flex;
+   justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, .78);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s ease;
+}
+
+.delete-confirm-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* CARD */
+
+.delete-confirm-card {
+    width: 100%;
+    max-width: 360px;
+
+    padding: 30px 25px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d2d1f,
+            #061a11
+        );
+
+    border: 1px solid rgba(245, 197, 66, .25);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, .55);
+
+    transform: scale(.85) translateY(20px);
+
+    transition: .35s ease;
+}
+
+.delete-confirm-modal.show
+.delete-confirm-card {
+    transform: scale(1) translateY(0);
+}
+
+
+/* ICON */
+
+.delete-confirm-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: rgba(180, 50, 50, .12);
+
+    border: 1px solid rgba(255, 100, 100, .2);
+
+    font-size: 30px;
+}
+
+
+/* TITLE */
+
+.delete-confirm-card h3 {
+    margin: 0 0 10px;
+
+    color: #fff;
+
+    font-size: 22px;
+}
+
+
+/* TEXT */
+
+.delete-confirm-card p {
+    margin: 0 auto 25px;
+
+    max-width: 290px;
+
+    color: #8fa398;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+/* BUTTONS */
+
+.delete-confirm-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.delete-confirm-actions button {
+    flex: 1;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+
+/* BATAL */
+
+.delete-cancel-btn {
+    border: 1px solid rgba(255,255,255,.1);
+
+    background: rgba(255,255,255,.05);
+
+    color: #aaa;
+}
+
+.delete-cancel-btn:hover {
+    background: rgba(255,255,255,.1);
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* HAPUS */
+
+.delete-confirm-btn {
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #c94b4b,
+        #963838
+    );
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(150, 50, 50, .2);
+}
+
+.delete-confirm-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(150, 50, 50, .35);
+}
+
+.delete-confirm-btn:active,
+.delete-cancel-btn:active {
+    transform: scale(.96);
+}
