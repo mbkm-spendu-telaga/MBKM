@@ -1024,4 +1024,6 @@ function openProgram(title, description) {
 
     titleElement.textContent = title;
     descriptionElement.textContent = description;
+
+   console.log("SCRIPT.JS BERHASIL DIJALANKAN DI GITHUB");
    
