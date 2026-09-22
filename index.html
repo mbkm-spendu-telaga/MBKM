@@ -300,7 +300,125 @@
 
 </section>
 
+<!-- BUKU TAMU -->
+<section class="guestbook-section" id="guestbook">
 
+    <div class="section-title">
+        <span>💌</span>
+        <h2>Buku Tamu</h2>
+        <p>Tinggalkan pesan dan cerita untuk kelompok kami.</p>
+    </div>
+
+  <div class="admin-login-box">
+    <button id="adminLoginButton" type="button" onclick="openAdminLogin()">
+    🔐 Login Admin
+    </button>
+
+    <button id="adminLogoutButton" onclick="adminLogout()" style="display:none;">
+        🚪 Logout Admin
+    </button>
+  </div>
+
+  <div id="adminLoginModal" class="admin-login-modal">
+
+    <div class="admin-login-card">
+
+        <button
+            class="admin-login-close"
+            onclick="closeAdminLogin()"
+            type="button"
+        >
+            ×
+        </button>
+
+        <div class="admin-login-icon">🔐</div>
+
+        <h3>Login Admin</h3>
+
+        <p>Masuk untuk mengelola Buku Tamu.</p>
+
+        <input
+            type="email"
+            id="adminEmail"
+            placeholder="Email admin"
+            autocomplete="username"
+        >
+
+        <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password admin"
+            autocomplete="current-password"
+        >
+
+        <button
+            class="admin-login-submit"
+            type="button"
+            onclick="adminLogin()"
+        >
+            🔐 Masuk
+        </button>
+
+    </div>
+
+  </div>
+  
+  <div class="guestbook-container">
+
+        <div class="guestbook-form">
+
+            <div class="guestbook-icon">
+                💌
+            </div>
+
+            <h3>Tulis Pesan</h3>
+
+            <p>
+                Sampaikan kesan, pesan, atau dukunganmu
+                untuk perjalanan MBKM kami.
+            </p>
+
+            <input
+                type="text"
+                id="guestName"
+                placeholder="Nama kamu"
+                maxlength="40"
+            >
+
+            <textarea
+                id="guestMessage"
+                placeholder="Tulis pesan kamu..."
+                maxlength="250"
+            ></textarea>
+
+            <button
+                type="button"
+                onclick="addGuestMessage()"
+                class="guestbook-submit"
+            >
+                Kirim Pesan ✨
+            </button>
+
+        </div>
+
+
+        <div class="guestbook-messages">
+
+            <div class="guestbook-heading">
+                <span>💬</span>
+                <h3>Pesan Pengunjung</h3>
+            </div>
+
+            <div id="guestMessages">
+                <!-- Pesan muncul di sini -->
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+  
 <!-- FOOTER -->
 <footer>
 
@@ -371,7 +489,8 @@
     🎵
 </button>
 
-<script src="script.js"></script>
+
+<script type="module" src="script.js"></script>
 
   <div id="programModal" class="program-modal">
 
@@ -395,5 +514,91 @@
 
   </div>
   
+  <!-- SHARE BUTTON -->
+
+<a
+    id="shareWhatsApp"
+    href="#"
+    target="_blank"
+    class="share-whatsapp"
+>
+    <span>💚</span>
+    <span>Bagikan Website</span>
+</a>
+
+  <!-- BACK TO TOP -->
+<button id="backToTop" aria-label="Kembali ke atas">
+    ↑
+</button>
+
+  <!-- KONFIRMASI HAPUS PESAN -->
+
+<div id="deleteConfirmModal" class="delete-confirm-modal">
+
+    <div class="delete-confirm-card">
+
+        <div class="delete-confirm-icon">
+            🗑️
+        </div>
+
+        <h3>Hapus Pesan?</h3>
+
+        <p>
+            Pesan ini akan dihapus secara permanen
+            dari Buku Tamu.
+        </p>
+
+        <div class="delete-confirm-actions">
+
+            <button
+                type="button"
+                class="delete-cancel-btn"
+                onclick="closeDeleteConfirm()"
+            >
+                Batal
+            </button>
+
+            <button
+                type="button"
+                class="delete-confirm-btn"
+                onclick="confirmDeleteGuestMessage()"
+            >
+                🗑️ Hapus
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+  
 </body>
+  <!-- LOADING SCREEN -->
+<div id="loadingScreen">
+    <div class="loading-content">
+
+        <div id="loadingIcon" class="loading-logo">🌱</div>
+
+        <h2>MBKM</h2>
+
+        <p id="loadingText">
+            Menyiapkan perjalanan kami...
+        </p>
+
+        <div class="loading-bar">
+            <span></span>
+        </div>
+
+        <div class="loading-percent">
+            <span id="loadingPercent">0</span>%
+        </div>
+
+    </div>
+</div>
 </html>
+
+
+
+
+
+
